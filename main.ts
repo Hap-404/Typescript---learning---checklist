@@ -124,5 +124,37 @@ let p = {
 
 fullName(p);
 
+// Class and Interfaces in Typescript
 
+class Employee{
+    employeeName: string;
+
+    constructor(name: string){
+        this.employeeName = name
+    }
+
+    greet(){
+        console.log(`Good Morning ${this.employeeName} this is written using method in class`);
+    }
+}
+
+let emp1 = new Employee('Harsh')
+emp1.greet();
+
+//INHERITANCE
+class Manager extends Employee {
+    constructor(managerName: string){
+        super(managerName)
+    }
+
+    delegateWork(){
+        console.log(`Manager is delegating Tasks`);
+        
+    }
+}
+
+let m1 = new Manager('Tony')
+m1.delegateWork()
+m1.greet()
+console.log(m1.employeeName);
 
