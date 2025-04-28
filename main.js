@@ -48,3 +48,28 @@ anyType = 40;
 // why we use union instead of any type ?
 // because it restricts to given types provided in union whereas any type has no restrictions
 // intellisence supports on union but not supports for any keyword 
+//function in typescript
+function add(num1, num2) {
+    return num1 + num2;
+}
+add(5, 10);
+// add(5,'10'); //throws an error Argument of type 'string' is not assignable to parameter of type 'number'.ts(2345)
+console.log(add(11, 5));
+//features of typescript functions
+//optional parameter: can be used using ? after variable which is required to be optional 
+// for using this feature the optional parameter it should always be after the required parameter 
+function add1(num1, num2) {
+    if (num2)
+        return num1 + num2;
+    else
+        return num1;
+}
+add1(4, 9);
+console.log(add1(5));
+//default parameter
+function add3(num1, num2) {
+    if (num2 === void 0) { num2 = 10; }
+    return num1 + num2;
+}
+console.log(add3(9, 8));
+console.log(add3(11)); //takes default value of 10 and returns 21
