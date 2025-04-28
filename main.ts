@@ -105,4 +105,24 @@ console.log(add3(9,8));
 console.log(add3(11)); //takes default value of 10 and returns 21
 
 
+//Interfaces in Typescript
+
+
+interface Person {
+    firstName: string,
+    lastName: string,
+    address?: string,
+}
+function fullName(person: Person){
+    console.log(`${person.firstName} ${person.lastName}`);
+}
+
+let p = {
+    firstName: 'Harsh',
+    lastName: 'Parekh',
+};
+
+fullName(p);
+
+
 

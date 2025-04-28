@@ -73,3 +73,11 @@ function add3(num1, num2) {
 }
 console.log(add3(9, 8));
 console.log(add3(11)); //takes default value of 10 and returns 21
+function fullName(person) {
+    console.log("".concat(person.firstName, " ").concat(person.lastName));
+}
+var p = {
+    firstName: 'Harsh',
+    lastName: 'Parekh',
+};
+fullName(p);
