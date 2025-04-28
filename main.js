@@ -115,7 +115,7 @@ var Manager = /** @class */ (function (_super) {
         return _super.call(this, managerName) || this;
     }
     Manager.prototype.delegateWork = function () {
-        console.log("Manager is delegating Tasks");
+        console.log("Manager is delegating Tasks ".concat(this.employeeName));
     };
     return Manager;
 }(Employee));
@@ -123,3 +123,6 @@ var m1 = new Manager('Tony');
 m1.delegateWork();
 m1.greet();
 console.log(m1.employeeName);
+//Access Modifiers used above 
+// they are public, private, public 
+// by default it is public 
